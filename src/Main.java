@@ -18,8 +18,6 @@ public class Main {
             }
         }
 
-        System.out.printf("Slova: %d%n", brojSlova);
-        System.out.printf("Brojevi: %d%n", brojBrojeva);
-        System.out.printf("Ostali znakovi: %d%n", brojZnakova);
+        System.out.printf("Slova: %d%nBrojevi: %d%nOstali znakovi: %d%n", brojSlova, brojBrojeva, brojZnakova);
     }
 }
