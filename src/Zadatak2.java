@@ -6,11 +6,17 @@ public class Zadatak2 {
 
         System.out.println("Unesite string koji zelite okrenuti: ");
         String zapis = sc.nextLine();
-        String[] obrnutiZapis = zapis.split("\\s");
-        int brojRijeci = obrnutiZapis.length;
-        for (int i = (brojRijeci - 1); i >= 0; i--) {
-            System.out.print(obrnutiZapis[i] + " ");
+        String[] privremeniZapis = zapis.split("\\s");
+        int brojRijeci = privremeniZapis.length;
+
+        for (int i = 0; i < brojRijeci / 2; i++) {
+            String s = privremeniZapis[i];
+            privremeniZapis[i] = privremeniZapis[brojRijeci - 1 - i];
+            privremeniZapis[brojRijeci - 1 - i] = s;
         }
 
+        String obrnutiZapis = String.join(" ", privremeniZapis).replaceAll("\\s+", " ");
+
+        System.out.println(obrnutiZapis);
     }
 }
